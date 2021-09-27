@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_marginTop="8dp"
+    app:cardBackgroundColor="@color/fontWhiteEnable"
+    app:cardCornerRadius="5dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="28dp"
+            android:src="@color/fontBlackEnable" />
+
+        <TextView
+            android:id="@+id/txtSubjectView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Subject 1 - Keme"
+            android:textColor="@color/tealDark"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/txtGradesView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="1.25"
+            android:textColor="@color/tealDark"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/txtUnitsView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="false"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-light"
+            android:text="3.00 Units"
+            android:textColor="@color/fontBlackEnable"
+            android:textStyle="italic" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

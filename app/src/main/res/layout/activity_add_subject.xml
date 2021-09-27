@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddSubjectActivity"
+    android:background="@drawable/bg_colored_withelements">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/btnClose"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:onClick="close"
+            android:src="@drawable/ic_close_black_24dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="281dp"
+            android:layout_height="500dp"
+            android:layout_centerInParent="true"
+            app:cardBackgroundColor="@color/tealDark"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="15dp"
+            app:cardPreventCornerOverlap="false"
+            tools:layout_editor_absoluteX="80dp"
+            tools:layout_editor_absoluteY="80dp">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/form_bg" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Fill out all \nnecessary fields."
+                    android:textColor="@color/tealLight"
+                    android:textSize="25sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/syFrom"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView"
+                    android:layout_alignBottom="@id/textInputLayout2"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/txtSYFrom"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:completionThreshold="1"
+                        android:hint="From"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="4" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout2"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtSYTo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:focusable="false"
+                        android:hint="To"
+                        android:inputType="number"
+                        android:maxLength="4" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="187dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/syFrom"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toEndOf="@id/button">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtTerm"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:focusable="false"
+                        android:hint="Term" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/textInputLayout2"
+                    android:layout_alignParentEnd="false"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/ic_btn_term_selector"
+                    android:clickable="true"
+                    android:elevation="5dp"
+                    android:focusable="true"
+                    android:onClick="showDialogBox" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout3"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="217dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textInputLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtSubject"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Subject"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapSentences"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout5"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textInputLayout3"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toEndOf="@id/btnGrades">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtGrades"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:focusable="false"
+                        android:hint="Grade"
+                        android:maxLength="4" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnGrades"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/textInputLayout3"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/ic_btn_term_selector"
+                    android:clickable="true"
+                    android:elevation="5dp"
+                    android:focusable="true"
+                    android:onClick="showDialogBox" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textInputLayout3"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtUnits"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Units"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal"
+                        android:maxLength="4" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnAdd"
+                    android:layout_width="217dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="50dp"
+                    android:background="@drawable/btn_bg"
+                    android:fontFamily="sans-serif-light"
+                    android:text="proceed"
+                    android:textColor="@color/fontWhiteEnable"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/blurLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <eightbitlab.com.blurview.BlurView
+            android:id="@+id/blur"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="showDialogBox"
+            tools:layout_editor_absoluteX="-39dp"
+            tools:layout_editor_absoluteY="0dp">
+
+        </eightbitlab.com.blurview.BlurView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/termSelectorLayout"
+            android:layout_width="266dp"
+            android:layout_height="195dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/schoolTermView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Term Selector"
+                    android:textColor="@color/tealDark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/add_CancelBTN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:fontFamily="sans-serif"
+                    android:onClick="hideDialogBox"
+                    android:text="CANCEL"
+                    android:textColor="@color/tealDark"
+                    android:textSize="13sp" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/schoolTermView"
+                    android:layout_centerInParent="false"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp">
+
+                    <RadioButton
+                        android:id="@+id/firstTerm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:button="@null"
+                        android:fontFamily="sans-serif-light"
+                        android:onClick="onSelectedItems"
+                        android:text="First Term"
+                        android:textSize="17sp" />
+
+                    <RadioButton
+                        android:id="@+id/secondTerm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:button="@null"
+                        android:fontFamily="sans-serif-light"
+                        android:onClick="onSelectedItems"
+                        android:text="Second Term"
+                        android:textSize="17sp" />
+
+                    <RadioButton
+                        android:id="@+id/summerTerm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:button="@null"
+                        android:fontFamily="sans-serif-light"
+                        android:onClick="onSelectedItems"
+                        android:text="Summer Term"
+                        android:textSize="17sp" />
+                </RadioGroup>
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/gradesSelector"
+            android:layout_width="200dp"
+            android:layout_height="450dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/schoolTermView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="false"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Grade Selector"
+                    android:textColor="@color/tealDark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/add_CancelBTN2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:fontFamily="sans-serif"
+                    android:onClick="hideDialogBox"
+                    android:text="CANCEL"
+                    android:textColor="@color/tealDark"
+                    android:textSize="13sp" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/schoolTermView2"
+                    android:layout_centerInParent="false"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp">
+
+                    <RadioButton
+                        android:id="@+id/g1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:button="@null"
+                        android:fontFamily="sans-serif-light"
+                        android:onClick="selectedGrade"
+                        android:text="1.00"
+                        android:textSize="17sp" />
+
+                    <RadioButton
+                        android:id="@+id/g2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:button="@null"
+                        android:fontFamily="sans-serif-light"
+                        android:onClick="selectedGrade"
+                        android:text="1.25"
+                        android:textSize="17sp" />
+
+                    <RadioButton
+                        android:id="@+id/g3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:button="@null"
+                        android:fontFamily="sans-serif-light"
+                        android:onClick="selectedGrade"
+                        android:text="1.50"
+                        android:textSize="17sp" />
+
+                    <RadioButton
+                        android:id="@+id/g4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:button="@null"
+                        android:fontFamily="sans-serif-light"
+                        android:onClick="selectedGrade"
+                        android:text="1.75"
+                        android:textSize="17sp" />
+
+                    <RadioButton
+                        android:id="@+id/g5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:button="@null"
+                        android:fontFamily="sans-serif-light"
+                        android:onClick="selectedGrade"
+                        android:text="2.00"
+                        android:textSize="17sp" />
+
+                    <RadioButton
+                        android:id="@+id/g6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:button="@null"
+                        android:fontFamily="sans-serif-light"
+                        android:onClick="selectedGrade"
+                        android:text="2.25"
+                        android:textSize="17sp" />
+
+                    <RadioButton
+                        android:id="@+id/g7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:button="@null"
+                        android:fontFamily="sans-serif-light"
+                        android:onClick="selectedGrade"
+                        android:text="2.50"
+                        android:textSize="17sp" />
+
+                    <RadioButton
+                        android:id="@+id/g8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:button="@null"
+                        android:fontFamily="sans-serif-light"
+                        android:onClick="selectedGrade"
+                        android:text="2.75"
+                        android:textSize="17sp" />
+
+                    <RadioButton
+                        android:id="@+id/g9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:button="@null"
+                        android:fontFamily="sans-serif-light"
+                        android:onClick="selectedGrade"
+                        android:text="3.00"
+                        android:textSize="17sp" />
+
+                    <RadioButton
+                        android:id="@+id/g10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:button="@null"
+                        android:fontFamily="sans-serif-light"
+                        android:onClick="selectedGrade"
+                        android:text="5.00"
+                        android:textSize="17sp" />
+
+                    <RadioButton
+                        android:id="@+id/g11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:button="@null"
+                        android:fontFamily="sans-serif-light"
+                        android:onClick="selectedGrade"
+                        android:text="INC"
+                        android:textSize="17sp" />
+
+                </RadioGroup>
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/reviewDetails"
+            android:layout_width="266dp"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Review Details"
+                    android:textColor="@color/tealDark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/final_add"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="24dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:onClick="insertToDatabase"
+                    android:text="ADD"
+                    android:textAlignment="center"
+                    android:textColor="@color/tealDark"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/cancel_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="24dp"
+                    android:layout_toLeftOf="@id/final_add"
+                    android:fontFamily="sans-serif-light"
+                    android:onClick="hideDialogBox"
+                    android:text="@android:string/cancel"
+                    android:textAlignment="center"
+                    android:textColor="@color/tealDark"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView3"
+                    android:layout_alignLeft="@id/textView3"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="School Year:"
+                    android:textColor="@color/fontBlackEnable"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView7"
+                    android:layout_alignLeft="@id/textView3"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Term:"
+                    android:textColor="@color/fontBlackEnable"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView9"
+                    android:layout_alignLeft="@id/textView3"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Subject:"
+                    android:textColor="@color/fontBlackEnable"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView10"
+                    android:layout_alignLeft="@id/textView3"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Grades:"
+                    android:textColor="@color/fontBlackEnable"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView11"
+                    android:layout_alignLeft="@id/textView3"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Units:"
+                    android:textColor="@color/fontBlackEnable"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/reviewSY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView3"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@id/textView7"
+                    android:fontFamily="sans-serif-light"
+                    android:text="2020-2021"
+                    android:textColor="@color/fontBlackEnable"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/reviewTerm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reviewSY"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toRightOf="@id/textView7"
+                    android:fontFamily="sans-serif-light"
+                    android:text="1st Term"
+                    android:textColor="@color/fontBlackEnable"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/reviewSubject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reviewTerm"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toRightOf="@id/textView7"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Art App"
+                    android:textColor="@color/fontBlackEnable"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/reviewGrades"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reviewSubject"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toRightOf="@id/textView7"
+                    android:fontFamily="sans-serif-light"
+                    android:text="INC"
+                    android:textColor="@color/fontBlackEnable"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/reviewUnits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reviewGrades"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toRightOf="@id/textView7"
+                    android:fontFamily="sans-serif-light"
+                    android:text="3.00"
+                    android:textColor="@color/fontBlackEnable"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

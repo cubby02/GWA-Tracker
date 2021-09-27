@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Splash Art. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/tealLightest</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/purpleDark</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="AppTheme3" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/tealLightest</item>
+        <item name="colorAccent">@color/tealDark</item>
+    </style>
+
+
+
+</resources>

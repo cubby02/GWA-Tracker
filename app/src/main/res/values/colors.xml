@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="tealDark">#055B5C</color>
+    <color name="tealLight">#08979D</color>
+    <color name="tealLightest">#6EC6CA</color>
+    <color name="tealShadow">#308A8E</color>
+    <color name="purpleLightDark">#8C71BC</color>
+    <color name="purpleDark">#8474A1</color>
+    <color name="purpleLight">#CCABD8</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
+</resources>

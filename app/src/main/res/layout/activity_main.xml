@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/greetings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_alignParentStart="true"
+            android:fontFamily="sans-serif-medium"
+            android:text="Hey, Granger!"
+            android:textColor="@color/tealDark"
+            android:textSize="28sp"
+            />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@id/view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_main_bg_element" />
+
+        <RelativeLayout
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/greetings">
+
+            <ImageView
+                android:id="@+id/space"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:src="@color/transparent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView1"
+                android:layout_width="150dp"
+                android:layout_height="170dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_toLeftOf="@id/space"
+                app:cardBackgroundColor="@color/purpleLight"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/overallUnits2"
+                        android:layout_centerInParent="false"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Units taken this Term:"
+                        android:textColor="@color/fontWhiteEnable" />
+
+                    <TextView
+                        android:id="@+id/overallUnits2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/border"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="34.00"
+                        android:textColor="@color/fontWhiteEnable"
+                        android:textSize="22sp" />
+
+                    <ImageView
+                        android:id="@+id/border"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:layout_centerInParent="true"
+                        android:src="@color/transparent" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/border"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-light"
+                        android:text="GWA for this Term:"
+                        android:textColor="@color/fontWhiteEnable"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/gwaTerm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textView8"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="1.25"
+                        android:textColor="@color/white"
+                        android:textSize="32sp" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview2"
+                android:layout_width="150dp"
+                android:layout_height="170dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_toRightOf="@id/space"
+                app:cardBackgroundColor="@color/purpleLightDark"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/overallUnits"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Overall units taken:"
+                        android:textColor="@color/fontWhiteEnable" />
+
+                    <TextView
+                        android:id="@+id/overallUnits"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/border2"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="34.00"
+                        android:textColor="@color/fontWhiteEnable"
+                        android:textSize="22sp" />
+
+                    <ImageView
+                        android:id="@+id/border2"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:layout_centerInParent="true"
+                        android:src="@color/transparent" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/border2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="0dp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Accumulated GWA:"
+                        android:textColor="@color/fontWhiteEnable"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/acuGWA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView4"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="1.002"
+                        android:textColor="@color/fontWhiteEnable"
+                        android:textSize="32sp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/termSelector"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/view"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/tealShadow"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:cardMaxElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/termTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="S.Y. 20-21 1st Term"
+                    android:textColor="@color/fontWhiteEnable"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.496"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.571" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:src="@drawable/ic_arrow_drop_down_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/termTitle"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/subjectList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/termSelector"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:clickable="true"
+            android:onClick="addSubject"
+            android:src="@drawable/ic_add_white_30dp"
+            app:fabCustomSize="65dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/blurLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone">
+
+        <eightbitlab.com.blurview.BlurView
+            android:id="@+id/blur"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="-39dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="266dp"
+            android:layout_height="350dp"
+            android:layout_centerInParent="true"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/schoolTermView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="School Year/Term"
+                    android:textColor="@color/tealDark"
+                    android:textSize="20sp" />
+
+                <ListView
+                    android:id="@+id/termList"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/cancelBtn"
+                    android:layout_below="@id/schoolTermView"
+                    android:layout_marginTop="10dp"
+                    android:foregroundGravity="center"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:id="@+id/cancelBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:fontFamily="sans-serif"
+                    android:text="CANCEL"
+                    android:textColor="@color/tealDark"
+                    android:textSize="13sp" />
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
